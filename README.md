@@ -43,6 +43,7 @@ This is a simple AI-powered chat application built with Node.js and Express. It 
    ```plaintext
    CLOUDFLARE_API_TOKEN=your_cloudflare_api_token
    CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id
+   APP_URL=your_app_url.vercel.app
    ```
 
 4. **Run the Application**:
