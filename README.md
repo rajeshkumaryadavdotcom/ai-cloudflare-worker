@@ -59,14 +59,16 @@ This is a simple AI-powered chat application built with Node.js and Express. It 
 ### Directory Structure
 
 ```
-├── app.js              # Main application file
-├── .env                # Environment variables
-├── index.html          # Frontend chat interface
-├── assets/             # Static files (CSS, JS, etc.)
-│   └── css/
-│       └── markdown.css  # Chat interface styling
-├── package.json        # Project dependencies and scripts
-└── README.md           # Project documentation
+├── api/              # Serverless functions
+│   └── ai.js
+├── public/           # Static files served automatically by Vercel
+│   └── assets/
+│       └── css/
+│           └── style.css
+├── index.html
+└── vercel.json       # Optional for rewrites
+├── package.json      # Project dependencies and scripts
+└── README.md         # Project documentation
 ```
 
 ## Usage
