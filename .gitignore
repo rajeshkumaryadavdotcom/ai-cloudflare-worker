@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+=======
+# Node modules
+node_modules/
+
+>>>>>>> 67f91ef (first commit)
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 lerna-debug.log*
 .pnpm-debug.log*
 
@@ -128,3 +135,50 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+=======
+
+# Environment Variables
+.env
+
+# Build and cache directories
+dist/
+build/
+.cache/
+.tmp/
+
+# Dependency directories
+bower_components/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Debug files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Specific to yarn
+.yarn-integrity
+.pnp.*
+
+# Specific to parcel-bundler
+.cache/
+
+# Specific to Next.js
+.next/
+
+# Static files (optional, if using a generated static folder)
+out/
+
+# Specific to Macmillan-specific setup if relevant
+.history/
+
+# Other files to ignore based on your setup
+*.bak
+*.old
+>>>>>>> 67f91ef (first commit)

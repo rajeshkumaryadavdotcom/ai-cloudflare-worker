@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>AI Chat</title>
+</head>
+<body>
+
+  <div id="chat-container">
+    <div id="chat-box"></div>
+    <div id="input-container">
+      <input type="text" id="user-input" placeholder="Type a message..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+
+    function addMessage(content, className) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${className}`;
+      messageDiv.textContent = content;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+	  async function fetchAIResponse(query) {
+	  try {
+	    const response = await fetch(`/ai?search=${encodeURIComponent(query)}`);
+	    const data = await response.json();
+	    console.log("AI response:", data);
+	    
+	    // Accessing the response text correctly
+	    if (data && data.success && data.result && data.result.response) {
+	      return data.result.response;
+	    } else {
+	      return "I'm sorry, I couldn't understand that.";
+	    }
+	  } catch (error) {
+	    console.error("Error fetching AI response:", error);
+	    return "There was an error connecting to the AI service.";
+	  }
+	}
+
+
+    async function handleUserInput() {
+      const query = userInput.value.trim();
+      if (query === '') return;
+
+      addMessage(query, 'user-message');
+      userInput.value = '';
+
+      const aiResponse = await fetchAIResponse(query);
+      addMessage(aiResponse, 'ai-message');
+    }
+
+    sendBtn.addEventListener('click', handleUserInput);
+    userInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleUserInput();
+    });
+  </script>
+</body>
+</html>
