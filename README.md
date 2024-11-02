@@ -85,11 +85,6 @@ This is a simple AI-powered chat application built with Node.js and Express. It 
 I have added front-end index.html file with chat interface.
 
 
-## Troubleshooting
-
-- **MIME Type Errors**: If styles aren't applied, ensure `assets` is properly configured as a static folder in Express.
-- **Pull and Push Errors**: Use `git pull origin main` to synchronize your branch before pushing.
-
 ## Contributing
 
 Feel free to submit issues, create pull requests, or suggest features. Contributions are welcome!
