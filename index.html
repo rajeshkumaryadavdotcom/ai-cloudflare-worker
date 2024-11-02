@@ -31,8 +31,10 @@
 
 	  async function fetchAIResponse(query) {
 	  try {
-      const appUrl = process.env.APP_URL || 'http://localhost:3000';
-	    const response = await fetch(`${process.env.appUrl}/ai?search=${encodeURIComponent(query)}`);
+      // Use process.env.APP_URL, for now I am just harrdcoding this as this is index.html
+      // const appUrl = process.env.APP_URL || 'http://localhost:3000';
+      const appUrl = 'https://ai-cloudflare-worker.vercel.app' || 'http://localhost:3000'; 
+      const response = await fetch(`${process.env.appUrl}/ai?search=${encodeURIComponent(query)}`);
 	    const data = await response.json();
 	    console.log("AI response:", data);
 	    
