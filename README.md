@@ -1,7 +1,3 @@
-Here's a sample `README.md` file for your AI-powered Express app with Cloudflare integration.
-
----
-
 # AI Cloudflare Worker Chat App
 
 This is a simple AI-powered chat application built with Node.js and Express. It uses Cloudflare's AI API to generate responses and provides a user-friendly chat interface styled like ChatGPT. Users can interact with the AI by sending queries, and the app returns responses in real-time.
@@ -96,6 +92,3 @@ Feel free to submit issues, create pull requests, or suggest features. Contribut
 
 This project is licensed under the MIT License.
 
---- 
-
-This `README.md` should give users a good understanding of the project’s purpose, setup instructions, and usage details. Let me know if there’s anything specific you’d like to add!
